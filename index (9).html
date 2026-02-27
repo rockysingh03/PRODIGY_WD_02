@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STOP WATCH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="toast" id="toast">Lap Recorded!</div>
+
+  <div class="container">
+    <h1><i class="fas fa-stopwatch"></i> STOP WATCH</h1>
+    <div class="timer" id="display">00:00:00</div>
+    <div class="buttons">
+      <button id="startPause" class="start"><i class="fas fa-play"></i></button>
+      <button id="reset" class="reset"><i class="fas fa-rotate-left"></i></button>
+      <button id="lap" class="lap"><i class="fas fa-flag"></i></button>
+    </div>
+
+    <div class="laps-container" id="lapsSection" style="display: none;">
+      <h2>Laps</h2>
+      <table id="lapTable">
+        <thead>
+          <tr>
+            <th>Lap</th>
+            <th>Lap Time</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="lapBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <audio id="startSound" src="start-pause.mp3"></audio>
+  <audio id="lapSound" src="lap.mp3"></audio>
+  <audio id="resetSound" src="reset.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
